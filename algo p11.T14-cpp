@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace::std;
+
+int main(){
+    string nomor[5]={"A001","A002","A003","A007","A008"};
+    string nama[5]={"BAYU","IRVAN","SUSI","DIANA","RONI"};
+    string cari,member,barang,namasaya,Nama;
+    int indeks,harga,diskon,jumlah,total,jum=5;
+    cout<<"Apakah Anda member atau tidak?[t/y] : "
+    ;cin>>member;
+if(member=="t")
+    {cout<<"\nSilahkan masukan nama anda:";cin>>Nama;
+     cout<<"\nBerapa jumlah barang yang anda beli : ";cin>>jumlah;
+        cout<<"\nNama barang yang dibeli : ";cin>>barang;
+        cout<<"\nHarga barang : ";cin>>harga;
+
+        total=jumlah*harga;
+
+        cout<<"\nJumlah Harga semuanya:"<<total;
+        return 0;}
+
+else  if (member=="y"){
+            cout<<"\nSilahakan masukan no id: ";cin>>cari;
+            for (int i=0;i<jum;i++){
+                if(cari==nomor[i]){
+                    namasaya=nama[i];}}
+        cout<<"\nAnda member"<<endl;
+        cout<<"\nId Anda   : "<<cari<<endl;
+        cout<<"\nNama Anda : "<<namasaya<<endl;
+        cout<<"***************************************";
+
+            cout<<"\nBerapa jumlah barang yg anda beli : "
+            ;cin>>jumlah;
+
+       cout<<"*** masukkan nama barang dan harga ***";
+            cout<<"\nNama barang : "
+            ;cin>>barang;
+            cout<<"\nHarga : "
+            ;cin>>harga;
+            total=jumlah*harga;
+
+
+       cout<<"*****************************************";
+            cout<<"\nSelamat anda mendapatkan diskon 5%";
+            total=total*5/100;
+            cout<<"\nJumalah Harga semuanya:"<<total;
+}}
+
